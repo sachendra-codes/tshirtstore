@@ -24,13 +24,14 @@ const StripeCheckout = ({
 
   const getFinalAmount = () => {
     let amount = 0
-    products.map((p) => {
-      amount = amount + p.price
-    })
+    if (products) {
+      products.map((p) => {
+        amount = amount + p.price
+      })
+    }
     return amount
   }
   const makePayment = (token) => {
-    console.log('hii')
     console.log(token)
     const body = {
       token,

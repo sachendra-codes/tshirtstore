@@ -21,23 +21,24 @@ const Cart = () => {
       <div className='row text-center'>
         <div className='col-sm-12'>
           <div className='row'>
-            {products.map((product, index) => {
-              return (
-                <div
-                  key={index}
-                  className='col-md-4 col-sm-6 d-flex align-items-stretch mb-4'
-                >
-                  <Card
+            {products &&
+              products.map((product, index) => {
+                return (
+                  <div
                     key={index}
-                    product={product}
-                    addtoCart={false}
-                    removeFromCart={true}
-                    setReload={setReload}
-                    reload={reload}
-                  />
-                </div>
-              )
-            })}
+                    className='col-md-4 col-sm-6 d-flex align-items-stretch mb-4'
+                  >
+                    <Card
+                      key={index}
+                      product={product}
+                      addtoCart={false}
+                      removeFromCart={true}
+                      setReload={setReload}
+                      reload={reload}
+                    />
+                  </div>
+                )
+              })}
           </div>
         </div>
 

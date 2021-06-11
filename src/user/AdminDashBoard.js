@@ -64,7 +64,7 @@ const AdminDashbosrd = () => {
       className='container bg-success p-4'
     >
       <div className='row'>
-        <div className='col-sm-6 col-md-6 col-3'>{adminLeftSide()}</div>
+        <div className='col-sm-6 col-md-6 col-12'>{adminLeftSide()}</div>
         <div className='col'>{adminRightSide()}</div>
       </div>
     </Base>
